@@ -1,0 +1,31 @@
+###
+GET http://localhost:8000/clients
+
+
+###
+POST http://localhost:8000/clients
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nom": "test",
+  "email": "new@gmail.com"
+}
+
+
+###PUT
+PUT http://localhost:8000/clients/4
+Content-Type: application/json
+Accept: application/json
+
+
+{
+  "nom": "CHANGED",
+  "email": "changed@gmail.com"
+}
+
+###
+DELETE http://localhost:8000/clients/3
+Accept: application/json
+
+

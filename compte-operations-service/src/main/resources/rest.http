@@ -1,0 +1,55 @@
+### POST COMPTE
+POST http://localhost:8001/comptes
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": null,
+  "solde": 5000,
+  "type": "COURANT",
+  "etat": "ACTIVE",
+  "idClient": 1,
+  "dateCreation": "11-02-2021 11:10:10"
+}
+
+### GET COMPTES
+GET http://localhost:8001/comptes/1
+
+
+### GET OPERATIONS
+GET http://localhost:8001/operations
+
+### Operation de versement
+POST http://localhost:8001/versement
+Accept: application/json
+Content-Type: application/json
+
+{
+  "compteId": "1",
+  "montant":"2000",
+  "type": "DEBIT"
+}
+### Operation de retrait
+POST http://localhost:8001/retrait
+Accept: application/json
+Content-Type: application/json
+
+{
+  "compteId": "1",
+  "montant":"1500",
+  "type": "CREDIT"
+}
+
+### Operation de virement
+POST http://localhost:8001/virement
+Accept: application/json
+Content-Type: application/json
+
+{
+  "compteIdSource": "1",
+  "compteIdDest": "2",
+  "montant":"1500"
+}
+
+
+
