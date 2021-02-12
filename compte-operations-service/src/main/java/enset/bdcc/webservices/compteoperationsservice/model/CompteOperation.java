@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CompteOperation {
-    private Double montant;
     private Long compteId;
+    private Double montant= 0d;
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     @Column(nullable = true)
     private LocalDateTime date;

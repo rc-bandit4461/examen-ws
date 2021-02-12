@@ -25,7 +25,7 @@ public class Operation {
     private Long id;
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime date;
-    private Double montant;
+    private Double montant = 0d;
     private String type;
     @ManyToOne
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

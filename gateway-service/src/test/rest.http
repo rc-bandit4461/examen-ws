@@ -1,0 +1,2 @@
+### test Client-Service
+GET http://localhost:8888/CLIENTS-SERVICE/comptes

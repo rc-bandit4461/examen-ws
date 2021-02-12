@@ -35,7 +35,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "compteId": "1",
+  "compteId": "2",
   "montant":"1500",
   "type": "CREDIT"
 }
@@ -52,4 +52,14 @@ Content-Type: application/json
 }
 
 
+### Comptes 'un client
+GET http://localhost:8001/clients/1/comptes
 
+### Operations 'un compte
+GET http://localhost:8001/comptes/1/operations/0/10
+
+### Operations 'un compte
+GET http://localhost:8001/comptes/2/operations/0/10
+
+### Compte 'un client
+GET http://localhost:8001/clients/1/comptes/full

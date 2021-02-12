@@ -2,24 +2,29 @@ package enset.bdcc.webservices.compteoperationsservice.service;
 
 import enset.bdcc.webservices.compteoperationsservice.entities.Compte;
 import enset.bdcc.webservices.compteoperationsservice.entities.Operation;
+import enset.bdcc.webservices.compteoperationsservice.model.Client;
 import enset.bdcc.webservices.compteoperationsservice.model.CompteOperation;
 import enset.bdcc.webservices.compteoperationsservice.model.CompteVirement;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 public interface OperationsService {
-    public Compte addCompte(Long clientId, String typeCompte);
+    Compte addCompte(Long clientId, String typeCompte);
 
-    public Operation versment(CompteOperation compteOperation);
+    Operation versment(CompteOperation compteOperation);
 
-    public Operation retrait(CompteOperation compteOperation);
+    Operation retrait(CompteOperation compteOperation);
 
-    public Page<Operation> getOperationsPaginated(Long compteId, int page, int size);
+    Page<Operation> getOperationsPaginated(Long compteId, int page, int size);
 
-    public Compte getCompteByClient(Long clientId);
+    Client getClientComptes(Long clientId);
 
-    public void activateCompte(Long compteId);
+    List<Compte> getComptesByClient(Long clientId);
 
-    public void suspendCompte(Long compteId);
+    void activateCompte(Long compteId);
 
-    public void virement(CompteVirement compteVirement);
+    void suspendCompte(Long compteId);
+
+    List<Operation> virement(CompteVirement compteVirement);
 }
